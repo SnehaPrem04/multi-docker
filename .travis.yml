@@ -4,8 +4,6 @@ services:
   - docker
 before-install:
   - docker build -t snehaprem04/react-test -f ./client/DockerFile.dev ./client
-scripts:
-  - docker run -e CI=true snehaprem04/react-test npm run test
 after_success:
   - docker build -t snehaprem04/multi-client ./client
   - docker build -t snehaprem04/multi-nginx ./nginx
