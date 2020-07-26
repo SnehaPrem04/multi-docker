@@ -5,14 +5,14 @@ services:
 before-install:
   - docker build -t snehaprem04/react-test -f ./client/DockerFile.dev ./client
 after_success:
-  - docker build -t snehaprem04/multi-client ./client
-  - docker build -t snehaprem04/multi-nginx ./nginx
-  - docker build -t snehaprem04/multi-server ./server
-  - docker build -t snehaprem04/multi-worker ./worker
+  - docker build -t snehaprem/multi-client ./client
+  - docker build -t snehaprem/multi-nginx ./nginx
+  - docker build -t snehaprem/multi-server ./server
+  - docker build -t snehaprem/multi-worker ./worker
   # Log in to the docker cli
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #Take those images and push into docker hub
-  - docker push snehaprem04/multi-client
-  - docker push snehaprem04/multi-nginx
-  - docker push snehaprem04/multi-server
-  - docker push snehaprem04/multi-worker
+  - docker push snehaprem/multi-client
+  - docker push snehaprem/multi-nginx
+  - docker push snehaprem/multi-server
+  - docker push snehaprem/multi-worker
