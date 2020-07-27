@@ -1,0 +1,29 @@
+ {
+     "AWSEBDockerrunVersion": 2,
+     "containerDefinitions":[
+         {
+             "name": "client",
+             "image": "snehaprem/multi-client",
+             "hostname": "client",
+             "essential": false
+         },
+         {
+            "name": "server",
+            "image": "snehaprem/multi-server",
+            "hostname": "api",
+            "essential": false
+         },
+         {
+            "name": "worker",
+            "image": "snehaprem/multi-worker",
+            "hostname": "worker",
+            "essential": false
+         },
+         {
+            "name": "nginx",
+            "image": "snehaprem/multi-nginx",
+            "hostname": "nginx",
+            "essential": true
+         }
+     ]
+ }
