@@ -9,14 +9,14 @@
             "essential": false
          },
          {
-            "memoryReservation": 256,
+            "memoryReservation": 128,
             "name": "server",
             "image": "snehaprem/multi-server",
             "hostname": "api",
             "essential": false
          },
          {
-            "memoryReservation": 256,
+            "memoryReservation": 128,
             "name": "worker",
             "image": "snehaprem/multi-worker",
             "hostname": "worker",
