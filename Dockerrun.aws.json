@@ -2,12 +2,11 @@
      "AWSEBDockerrunVersion": 2,
      "containerDefinitions":[
          {
-            "MemoryReservation": 256,
-            "cpu": 1,
-             "name": "client",
-             "image": "snehaprem/multi-client",
-             "hostname": "client",
-             "essential": false
+            "memoryReservation": 256,
+            "name": "client",
+            "image": "snehaprem/multi-client",
+            "hostname": "client",
+            "essential": false
          },
          {
             "name": "server",
@@ -22,8 +21,7 @@
             "essential": false
          },
          {
-            "MemoryReservation": 256,
-            "cpu": 1,
+            "memoryReservation": 256,
             "name": "nginx",
             "image": "snehaprem/multi-nginx",
             "hostname": "nginx",
